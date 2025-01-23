@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  /* cursor: none; */
+}
+.purple {
+  height: 100vh;
+  width: 100vw;
+  background-color: #edbfff;
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all ease 0.5s;
+}
+#cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(249, 112, 247, 0.7);
+  z-index: 10;
+  pointer-events: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  mix-blend-mode: difference;
+  display: block;
+}
+#sound-on {
+  position: fixed;
+  width: 70px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: rgba(249, 112, 247, 0.7);
+  mix-blend-mode: difference;
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+#sound-on p {
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+}
+#main {
+  background-color: #0f0d0d;
+}
+
+#page-1 {
+  min-height: 100vh;
+  width: 100%;
+}
+#nav {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  /* background-color: #000; */
+  position: fixed;
+  z-index: 1002;
+  mix-blend-mode: difference;
+}
+#nav img {
+  height: 24px;
+}
+#nav .home {
+  display: flex;
+  gap: 10px;
+}
+#nav .home a {
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+#nav .home a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#page-1 h1 {
+  padding-top: 30vh;
+  font-size: 6vw;
+  font-weight: 500;
+  margin-left: 10vw;
+}
+#page-1 h2 {
+  margin-left: 30vw;
+  font-size: 6vw;
+  font-weight: 500;
+}
+#page-1 > video {
+  margin-top: 30vh;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#page-2 {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#page-2 h1 {
+  font-size: 6vw;
+  font-weight: 400;
+  margin-left: 5%;
+  margin-top: 10vh;
+  color: #111;
+}
+#page-2 .txt {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20vh;
+  margin-bottom: 10vh;
+}
+#page-2 .txt .box-1 {
+  width: 300px;
+  display: flex;
+  align-items: center;
+}
+#page-2 .txt .box-1 h4 {
+  font-size: 2.5vw;
+  font-weight: 300;
+  color: #111;
+}
+#page-2 .txt .box-2 {
+  width: 250px;
+}
+#page-2 .txt .box-2 p {
+  font-size: 22px;
+  color: #111;
+}
+#page-2 .txt .box-2 button {
+  width: 100%;
+  border: none;
+  padding: 7px 0;
+  border-radius: 20px;
+  background-color: #edbfff;
+  color: #000;
+  margin-top: 20px;
+}
+
+#page-3 {
+  border-top: 2px solid #5c5a5a;
+  min-height: 100vh;
+  width: 100%;
+}
+#page-3 > h1 {
+  color: #111;
+  font-size: 7vw;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 20vh 0 0 20vh;
+}
+#page-3 > .part-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0 20px;
+}
+#page-3 > .part-1 video {
+  height: 400px;
+}
+#page-3 > .part-1 img {
+  margin-top: 150px;
+}
+
+#page-4 {
+  position: relative;
+  z-index: 9;
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 30vh;
+  border-bottom: 2px solid #555;
+}
+#page-4 > .element {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page-4 > .element > .text {
+  background-color: transparent;
+  height: 115px;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+#page-4 > .element > .text > span {
+  display: block;
+  color: #fff;
+  font-size: 5.5vw;
+  font-weight: 600;
+  transition: all ease-out 0.5s;
+}
+#page-4 > .element:hover span {
+  transform: translateY(-115px);
+  transition: all ease-out 0.5s;
+}
+#page-4 > .element:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
+}
+#page-4 .element img {
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  transform: translateY(10%) rotate(2deg);
+}
+#page-4 .element img:nth-child(1) {
+  left: 8%;
+}
+#page-4 .element img:nth-child(3) {
+  right: 10%;
+}
+#page-5 {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+}
+#page-5 > .client {
+  padding: 10vw;
+}
+#page-5 > .client h3 {
+  font-size: 2vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #555;
+}
+#page-5 > .client > .company {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #555;
+  padding: 30px;
+}
+#page-5 > .client > .company > span {
+  color: #555;
+  transition: all ease 0.2s;
+  font-size: 20px;
+}
+#page-5 > .client > .company:hover span {
+  color: #fff;
+}
+
+#footer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #edbfff;
+}
+
+#footer .first-part {
+  padding: 0 10vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer .first-part h4 {
+  width: 60%;
+  font-size: 3vw;
+  font-weight: 400;
+  color: #000;
+}
+#footer .first-part span {
+  background-color: #fff;
+  color: #000;
+  display: inline-block; /* Ensure the element behaves like a box */
+  width: 200px; /* Explicitly set width */
+  height: 200px; /* Explicitly set height to match width */
+  border-radius: 50%; /* Makes the element circular */
+  text-align: center; /* Center-align the text horizontally */
+  line-height: 200px; /* Center-align the text vertically */
+}
+#footer h1 {
+  color: #000;
+  text-align: center;
+}
